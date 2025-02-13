@@ -50,17 +50,11 @@ def minus(aa, bb, dd, ee):
     c = aa - bb + dd - ee
     return c
 
-
-def minus(ccc, ddd):
-    c = ccc - ddd
-    return c
-
 a = 3
 b = 4
 d = 3
 e = 7
 print(minus(a, b, d, e))
-print (minus(a, b))
 # print (minus(b, a))
 # print (minus(4, 3))
 
