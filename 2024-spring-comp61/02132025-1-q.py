@@ -1,14 +1,15 @@
 base = 4
-input_raw = input("enter a value: ")
 print("1. add")
 print("2. minus")
 print("3. print")
 print("4. quit")
+input_raw = int(input("enter a value: "))
 
 while (input_raw != 4):
     if(input_raw == 1):
-        result = -1;
-        result = 3 + base;
+        result = -1
+        base = base + 2
+        result = 3 + base
         print(result)
     elif(input_raw == 2):
         result = -1
@@ -17,7 +18,7 @@ while (input_raw != 4):
     elif(input_raw == 3):
         print(base)
 
-    input_raw = input("enter a value: ")
+    input_raw = int(input("enter a value: "))
     print("1. add")
     print("2. minus")
     print("3. print")
