@@ -13,7 +13,7 @@ def function_1():
     else:
         print("Positive odd number")
 
-def function_2(num, num1):
+def function_2(n):
     if num % 2 == 0:
         print("Negative even number")
     else:
