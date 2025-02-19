@@ -1,57 +1,91 @@
-def add_student(names, grades):
-    """
-    Hint:
-    - Use input() to get the student’s name and grade.
-    - Append the name to the 'names' list and the grade to the 'grades' list.
-    - Make sure the indexes of both lists match (i.e., names[i] corresponds to grades[i]).
-    """
+def roll_die():
+    # Hint:
+    # - Generate and return a random integer between 1 and 6.
+    # - Use the random module (random.randint).
+    pass # you can delete this line when you actually start writing code for this section
 
-def view_students(names, grades):
-    """
-    Hint:
-    - Check if the 'names' list is empty. If it is, inform the user that no records exist.
-    - Use a for loop or a while loop to display all student names with their corresponding grades.
-    - Use the range() function to loop through the indices of the lists.
-    """
 
-def update_student_grade(names, grades):
-    """
-    Hint:
-    - Prompt the user to enter the name of the student whose grade needs to be updated.
-    - Check if the entered name exists in the 'names' list using the 'in' operator.
-    - If the student exists, find the index using names.index() and update the corresponding grade in the 'grades' list.
-    - If the student doesn’t exist, display an appropriate message.
-    """
+def roll_multiple_dice(num_dice):
+    # Hint:
+    # - Roll the die 'num_dice' times.
+    # - Store each roll in a list.
+    # - Calculate and return the total of all rolls.
+    # - Print the rolled values for the player to see.
+    pass # you can delete this line when you actually start writing code for this section
 
-def remove_student(names, grades):
-    """
-    Hint:
-    - Ask the user for the student name to remove.
-    - Check if the name is in the 'names' list.
-    - If found, use the index to remove the student from both 'names' and 'grades' using pop().
-    - If the name is not found, print an error message.
-    """
 
-def exit_program():
-    """
-    Hint:
-    - This function should simply print a goodbye message.
-    - The actual exit logic (breaking the while loop) is handled in the main function.
-    """
+def get_round_result(player_total, computer_total):
+    # Hint:
+    # - Compare player_total and computer_total.
+    # - Return:
+    #     "Win" if player_total > computer_total,
+    #     "Draw" if they are equal,
+    #     "Loss" if computer_total > player_total.
+    pass # you can delete this line when you actually start writing code for this section
 
-#vvvvvvvvvvvv main global logic vvvvvvvvvvvv#
-"""
-Hint:
-- Create two empty lists: 'names' to store student names and 'grades' to store their grades.
-- Use a 'while True:' loop to display the menu continuously until the user decides to exit.
-- Inside the loop:
-    1. Print the menu options.
-    2. Use input() to get the user's choice.
-    3. Use if-elif-else statements to:
-        - Call add_student() if the user selects option 1.
-        - Call view_students() if the user selects option 2.
-        - Call update_student_grade() if the user selects option 3.
-        - Call remove_student() if the user selects option 4.
-        - Call exit_program() and break the loop if the user selects option 5.
-    4. Print an error message for invalid choices.
-"""
+
+def shop(score):
+    # Hint:
+    # - Show a menu with three options:
+    #     1. Add +5 points (Cost: 5 points)
+    #     2. Add +15 points (Cost: 10 points)
+    #     3. Exit Shop
+    # - Ask for user input to select an option.
+    # - Check if the player has enough points before applying bonuses.
+    # - Return the updated score.
+    pass # you can delete this line when you actually start writing code for this section
+
+
+def display_statistics(rounds, wins, draws, losses, score, round_numbers, player_totals, computer_totals, results):
+    # Hint:
+    # - Print:
+    #     - Total rounds played
+    #     - Number of wins, draws, and losses
+    #     - Final score
+    # - Use a loop to display the history of all rounds:
+    #     Round X: Player Total: Y vs Computer Total: Z -> Result
+    pass # you can delete this line when you actually start writing code for this section
+
+
+# --------------------------------------------------------------
+# -----------------------main logic-----------------------------
+# 1. Import the random module.
+# 2. Initialize the random number generator using random.seed().
+# 3. Create and initialize variables:
+#     - score: integer (starting at 0)
+#     - rounds, wins, draws, losses: integers for game stats
+# 4. Create empty lists to track:
+#     - round_numbers
+#     - player_totals
+#     - computer_totals
+#     - results
+
+# --------------------------------------------------------
+# Main Game Loop (while loop until the player chooses to stop)
+# --------------------------------------------------------
+# 1. Increment the round counter.
+# 2. Ask if the player wants to visit the shop:
+#     - If yes, call shop(score) and update the score.
+# 3. Display the round number.
+# 4. Call roll_multiple_dice(2) to get the player's total.
+# 5. Call roll_multiple_dice(2) to get the computer's total.
+# 6. Call get_round_result(player_total, computer_total) to get the round result.
+# 7. Update:
+#     - wins, draws, losses counters based on the result.
+#     - score:
+#         +20 points for a win
+#         +10 points for a draw
+#         +0 points for a loss
+# 8. Append the round details to the corresponding lists:
+#     - round_numbers, player_totals, computer_totals, results
+# 9. Print the round result and the current score.
+# 10. Ask if the player wants to play another round:
+#     - If no, break out of the loop.
+
+# --------------------------------------------------------
+# Final Statistics
+# --------------------------------------------------------
+# - After exiting the loop:
+#     - Call display_statistics(...) with all necessary variables and lists.
+#     - Show the final results and round history.
+
