@@ -60,7 +60,17 @@
 # print (aaclass.a)
 # print(aaclass.call())
 
+
+
+# create a variable call "money" in person class,
+# make default money = 0
+# both shawn and tina will work for 12 month
+# creat a function to calculate entire year salary
+# outside of the class defination (in main logic):
+#   then shawn give tine 10 dollar, print out how much money shawn and tina have after that
+# xiangxulin.com
 class Person:
+    money = 0
     name = "testUser"
     age = -1
     job = "none"
@@ -68,25 +78,48 @@ class Person:
     def salary(self):
         return self.age * 10
     
+    def workforayear(self):
+        self.money = self.salary() * 12
+    
+    def workforoneyear(self):
+        return self.salary() * 12
+    
+    def give(self, amount): ## give money to outside
+        self.money = self.money - amount
+        return amount
+    
+    def get(self, amount):  ## receive money from outside
+        self.money = self.money + amount
+        return self.money
+    
 shawnPerson = Person()
 shawnPerson.name = "shawn"
 shawnPerson.age = 10
 shawnPerson.job = "programmer"
-print(shawnPerson.salary())
-print(shawnPerson.name)
-print(shawnPerson.age)
-print(shawnPerson.job)
 TinaPerson = Person()
 TinaPerson.name = "Tina"
 TinaPerson.age = 9
 TinaPerson.job = "hihi"
-print(TinaPerson.salary())
-print(TinaPerson.name)
-print(TinaPerson.age)
-print(TinaPerson.job)
-BenPerson = Person()
-BenPerson.age = 8
-print(TinaPerson.salary())
+shawnPerson.workforayear()
+TinaPerson.workforayear()
+shawnPerson.money = shawnPerson.workforoneyear()
+TinaPerson.money = TinaPerson.workforoneyear()
+print(shawnPerson.money)
+print(TinaPerson.money)
+shawnPerson.money = shawnPerson.money -10
+TinaPerson.money = TinaPerson.money +10
+
+TinaPerson.get(shawnPerson.give(20))
+print("-------------")
+print(shawnPerson.money)
+print(TinaPerson.money)
+
+
+# print(TinaPerson.salary())
+
+# BenPerson = Person()
+# BenPerson.age = 8
+# print(TinaPerson.salary())
 
 #create a class call person, with a variable name call "name", "age", "job"
 #inside class, create another function called "salary"
