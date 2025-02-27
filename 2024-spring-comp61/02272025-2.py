@@ -12,6 +12,8 @@ class Laptop:
     def buy_ram(self, _add):
         self.ram = self.ram + _add
     # add_space
+    def add_space(self, _space):
+        self.space = self.space + _space
 
 class Student:
     def __init__(self, _name, _gpa, _study_hour = 0):
@@ -19,16 +21,34 @@ class Student:
         self.gpa = _gpa
         self.study_hour = _study_hour
         self.my_laptop = Laptop("dell", 16, "GTX1080", 120)
+        self.second_laptop = Laptop("dell", 16, "GTX1080", 120)
+        self.money = 0
         #money
     def study_something(self, _hour = 1):
         self.study_hour = self.study_hour + _hour
+
+    def work(self):
+        self.money = self.money + 200
+    
+    def buy_pc_space(self):
+        if(self.money > 300):
+            self.my_laptop.add_space(100)
+        else:
+            print("you need more money")
     #work
     #buy_pc_space
 
 shawn = Student("shawn", 1.0)
-tina = Student("tina", 0.0, 100)
-ben = Student("ben", 2.0,)
-print(shawn.my_laptop.brand)
-print(shawn.my_laptop.ram)
-shawn.my_laptop.buy_ram(2)
-print(shawn.my_laptop.ram)
+# tina = Student("tina", 0.0, 100)
+# ben = Student("ben", 2.0,)
+# print(shawn.my_laptop.brand)
+# print(shawn.my_laptop.ram)
+# shawn.my_laptop.buy_ram(2)
+# print(shawn.my_laptop.ram)
+
+shawn.work()
+shawn.buy_pc_space()
+shawn.work()
+shawn.buy_pc_space()
+print(shawn.my_laptop.space)
+print(shawn.second_laptop.space)
