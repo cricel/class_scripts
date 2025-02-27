@@ -52,3 +52,4 @@ shawn.work()
 shawn.buy_pc_space()
 print(shawn.my_laptop.space)
 print(shawn.second_laptop.space)
+# xiangxulin.com
