@@ -141,3 +141,9 @@ print(TinaPerson.money)
 # b=test1()
 # # a = test(4)
 # # b = test(10)
+
+
+# a = []
+# a.append(xxx)
+# [4, 6]
+# [2, 4]
