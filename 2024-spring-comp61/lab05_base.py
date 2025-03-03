@@ -1,28 +1,8 @@
-"""
-Assignment: Classes Interaction (Car and Owner)
-
-Structure:
-1. Overview
-2. Breakdown
-3. Base Code
-4. Sample Output
-
-Requirements Recap:
-- Car class with attributes make, model, year and a method get_car_info().
-- Owner class with attributes name, age, and a list of cars_owned, plus methods
-  purchase_car() and show_owned_cars().
-- Demonstrate functionality by creating multiple Owners and Cars in the main() function.
-"""
-
 # 1. Car Class
 class Car:
     def __init__(self, make, model, year):
         """
         TODO: Store make, model, and year as instance variables.
-        Example:
-            self.make = make
-            self.model = model
-            self.year = year
         """
         pass
 
@@ -38,7 +18,7 @@ class Owner:
     def __init__(self, name, age):
         """
         TODO: Store name and age.
-              Initialize a list to store cars (e.g., self.cars_owned = []).
+              Initialize a list to store cars.
         """
         pass
 
