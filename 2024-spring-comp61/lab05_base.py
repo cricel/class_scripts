@@ -1,87 +1,76 @@
-import random
-import time
+"""
+Assignment: Classes Interaction (Car and Owner)
 
-class Library:
-    def __init__(self):
-        """Initialize the library with rooms and books using lists."""
-        # TODO: Create a list of room names (one room for each book)
-        self.rooms = []  # Example: ["Hall of Magic", "Chamber of Science", "Dungeon of Code"]
-        
-        # TODO: Create a list of books, matching the rooms (each book corresponds to the same index in self.rooms)
-        self.books = []  # Example: ["Grimoire of Spells", "Physics of the Cosmos", "Mastering Python"]
-        
-        # TODO: Create a variable to track knowledge points (start with 0)
-        self.knowledge_points = 0
+Structure:
+1. Overview
+2. Breakdown
+3. Base Code
+4. Sample Output
 
-    def display_books(self):
-        """Display available books and their locations in the library."""
-        print("\n📚 Available Books in the Library:")
-        # TODO: Loop through both lists and print available books with their rooms
-        
+Requirements Recap:
+- Car class with attributes make, model, year and a method get_car_info().
+- Owner class with attributes name, age, and a list of cars_owned, plus methods
+  purchase_car() and show_owned_cars().
+- Demonstrate functionality by creating multiple Owners and Cars in the main() function.
+"""
 
-    def borrow_book(self, room_name):
-        """Allow the player to borrow a book from a specified room."""
-        # TODO: Find the room index in self.rooms
-        
+# 1. Car Class
+class Car:
+    def __init__(self, make, model, year):
+        """
+        TODO: Store make, model, and year as instance variables.
+        Example:
+            self.make = make
+            self.model = model
+            self.year = year
+        """
+        pass
 
-        # TODO: Get the corresponding book name and check if it's available
-        
+    def get_car_info(self):
+        """
+        TODO: Return a descriptive string, for example:
+              "2010 Toyota Camry"
+        """
+        pass
 
-        # TODO: Handle cursed books (lose 2 knowledge points)
-        
+# 2. Owner Class
+class Owner:
+    def __init__(self, name, age):
+        """
+        TODO: Store name and age.
+              Initialize a list to store cars (e.g., self.cars_owned = []).
+        """
+        pass
 
-        # TODO: Add a 30% chance of challenge before borrowing the book
-        
+    def purchase_car(self, car):
+        """
+        TODO: Append the passed-in car object to self.cars_owned.
+              Print a statement:
+              "<owner_name> just purchased a <car_info>."
+        """
+        pass
 
-        # TODO: Otherwise, allow the book to be borrowed and add 1 knowledge point
-        
+    def show_owned_cars(self):
+        """
+        TODO: If no cars are owned, print a message:
+              "<owner_name> doesn't own any cars yet."
+              Otherwise, print each car's info in a loop.
+        """
+        pass
 
-    def return_book(self, book_name):
-        """Allow the player to return a book to the library."""
-        # TODO: Find an empty slot in self.books to return the book
-        
 
-        # TODO: Increase knowledge points when a book is returned
-        
+# 3. Main Demonstration Function
+def main():
+    """
+    Steps to implement here:
+      - Create multiple Owner objects (owner1, owner2, etc.).
+      - Create multiple Car objects (car1, car2, car3, etc.).
+      - Let each Owner purchase at least two Cars.
+      - Use show_owned_cars() to verify the purchases.
+    """
+    pass
 
-    def solve_challenge(self):
-        """Ask the player a random question as a challenge to borrow certain books."""
-        # TODO: Create a list of challenge questions and answers
-        
 
-        # TODO: Pick a random question
-        
-
-        # TODO: Ask the user the question and check if they answer correctly
-        
-
-# --------- Game Loop ---------
-print("\n🏛 Welcome to the Grand Library of Eldoria!")
-player_name = input("🎭 Enter your name, adventurer: ")
-
-library = Library()
-
-while library.knowledge_points < 10:
-    library.display_books()
-    action = input("\n🔹 Choose an action: [1] Borrow a book [2] Return a book [3] Exit: ")
-
-    if action == "1":
-        room_choice = input("🏛 Enter the room name to explore: ")
-        # TODO: Call the borrow_book function
-        
-
-    elif action == "2":
-        book_name = input("📖 Enter the name of the book you're returning: ")
-        # TODO: Call the return_book function
-        
-
-    elif action == "3":
-        print("\n👋 You leave the library. Thanks for playing!")
-        break
-
-    else:
-        print("❌ Invalid choice! Try again.")
-
-    time.sleep(1)  # Short delay for better game pacing
-
-print("\n🎉 Congratulations! You have become a Master Scholar!")
+# 4. Execution
+if __name__ == "__main__":
+    main()
