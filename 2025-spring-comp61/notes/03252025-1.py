@@ -80,27 +80,27 @@ num = random.randint(0, 1)
 # 3. when user enter the cell, write a if statement to check
 # if there has a mine or not (if == to 1 or not)
 # 4. continue untill user die or all mine found
-import random 
-# num = random.randint(0, 1)
+# import random 
+# # num = random.randint(0, 1)
 
-two_d_list = []
-line = []
-for i in range(3):
-    for j in range(3):
-        # line.append(str(i) + str(j) + " ")
-        line.append(random.randint(0, 1))
-    two_d_list.append(line)
-    line = []
+# two_d_list = []
+# line = []
+# for i in range(3):
+#     for j in range(3):
+#         # line.append(str(i) + str(j) + " ")
+#         line.append(random.randint(0, 1))
+#     two_d_list.append(line)
+#     line = []
 
-print(two_d_list)
+# print(two_d_list)
 
-input_x = int(input("input x position: "))
-input_y = int(input("input y position: "))
+# input_x = int(input("input x position: "))
+# input_y = int(input("input y position: "))
 
-if(two_d_list[input_x][input_y] == 1):
-    print("you lose")
-else:
-    print("keep going")
+# if(two_d_list[input_x][input_y] == 1):
+#     print("you lose")
+# else:
+#     print("keep going")
 
 
 # print_line = ""
@@ -111,3 +111,50 @@ else:
 #     print(print_line)
 #     print_line = ""
 
+
+
+
+import random 
+# num = random.randint(0, 1)
+
+visual_two_d_list = []
+visual_line = []
+for i in range(3):
+    for j in range(3):
+        # line.append(str(i) + str(j) + " ")
+        visual_line.append("#")
+    visual_two_d_list.append(visual_line)
+    visual_line = []
+
+print(visual_two_d_list)
+
+mine_two_d_list = []
+mine_line = []
+for i in range(3):
+    for j in range(3):
+        # line.append(str(i) + str(j) + " ")
+        mine_line.append(random.randint(0, 1))
+    mine_two_d_list.append(mine_line)
+    mine_line = []
+
+print(mine_two_d_list)
+
+input_x = int(input("input x position: "))
+input_y = int(input("input y position: "))
+
+if(mine_two_d_list[input_x][input_y] == 1):
+    visual_two_d_list[input_x][input_y] = "X"
+    print("you lose")
+else:
+    visual_two_d_list[input_x][input_y] = "_"
+    print("keep going")
+
+print(visual_two_d_list)
+
+# print_line = ""
+# for i in range(3):
+#     for j in range(3):
+#         print_line += two_d_list[i][j]
+    
+#     print(print_line)
+#     print_line = ""
