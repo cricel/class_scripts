@@ -30,20 +30,84 @@
 #     print(line)
 #     line = ""
 
+# two_d_list = []
+# line = []
+# for i in range(3):
+#     for j in range(3):
+#         line.append(str(i) + str(j) + " ")
+#     two_d_list.append(line)
+#     line = []
+
+# print(two_d_list)
+
+# print_line = ""
+# for i in range(3):
+#     for j in range(3):
+#         print_line += two_d_list[i][j]
+    
+#     print(print_line)
+#     print_line = ""
+
+import random 
+num = random.randint(0, 1)
+
+# two_d_list = []
+# line = []
+# for i in range(3):
+#     for j in range(3):
+#         # line.append(str(i) + str(j) + " ")
+#         if(i == j):
+#             line.append("*")
+#         else:
+#             line.append(" ")
+#     two_d_list.append(line)
+#     line = []
+
+# print(two_d_list)
+
+# print_line = ""
+# for i in range(3):
+#     for j in range(3):
+#         print_line += two_d_list[i][j]
+    
+#     print(print_line)
+#     print_line = ""
+
+
+
+# 1. init each cell of 2d list to random number bettwen 0 and 1
+# 2. ask user input, which cell they want to open
+# 3. when user enter the cell, write a if statement to check
+# if there has a mine or not (if == to 1 or not)
+# 4. continue untill user die or all mine found
+import random 
+# num = random.randint(0, 1)
+
 two_d_list = []
 line = []
 for i in range(3):
     for j in range(3):
-        line.append(str(i) + str(j) + " ")
+        # line.append(str(i) + str(j) + " ")
+        line.append(random.randint(0, 1))
     two_d_list.append(line)
     line = []
 
 print(two_d_list)
 
-print_line = ""
-for i in range(3):
-    for j in range(3):
-        print_line += two_d_list[i][j]
+input_x = int(input("input x position: "))
+input_y = int(input("input y position: "))
+
+if(two_d_list[input_x][input_y] == 1):
+    print("you lose")
+else:
+    print("keep going")
+
+
+# print_line = ""
+# for i in range(3):
+#     for j in range(3):
+#         print_line += two_d_list[i][j]
     
-    print(print_line)
-    print_line = ""
+#     print(print_line)
+#     print_line = ""
+
