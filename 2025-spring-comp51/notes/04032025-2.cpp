@@ -48,7 +48,14 @@ class FancyArr{
                 for(int j = 0; j < 3; j++){
                     // cout << _two_d_arr[i][j];
                     cout << "Enter a Number at " << i << " " << j << ": ";
-                    cin >> two_d_arr[i][j];
+                    int _tempInput;
+                    cin >> _tempInput;
+                    if (_tempInput > 100){
+                        two_d_arr[i][j] = 100;
+                    }
+                    else{
+                        two_d_arr[i][j] = _tempInput;
+                    }
                 } 
             }
         }
@@ -77,6 +84,8 @@ class FancyArr{
                 row = 0;
                 total = 0;
             }
+
+
         }
 
         void display(){
@@ -94,10 +103,18 @@ int main() {
     fancyArr.getInput();
     // fancyArr.sum(0);
     fancyArr.display();
+    fancyArr.sum();
     cout << fancyArr.total;
+
+    if(fancyArr.total > 800){
+        fancyArr.getInput();
+    }
+
+    fancyArr.display();
 
     // create a logic for each input, make sure it is smaller than 100
     // if it is bigger than 100, force the value to 100
+
     // at the end of sum, if the total is bigger than 800, ask user to re enter the value again
 
 
