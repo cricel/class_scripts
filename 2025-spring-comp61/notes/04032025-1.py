@@ -9,6 +9,17 @@ def sum_region(grid, row):
     if(row < 2):
         sum_region(grid, row + 1)
    
+def sum_region_dict(grid, row):
+    global total
+    print(grid)
+    for key, value in grid.items():
+        print(key)
+        print(value)
+        for key_inner, value_inner in value.items():
+            print(key_inner)
+            print(value_inner)
+            total += value_inner
+
 # Example usage
 grid = [
     [1, 2, 3],
@@ -24,6 +35,7 @@ grid_dict.update({'2': {'0': 7, '1': 8, '2': 9}})
 # step 2, make each col is also a key value
 # pair dict
 # step 3, add them up to 45
-sum_region(grid, 0)  # Output: 45
+# sum_region(grid, 0)  # Output: 45
+sum_region_dict(grid_dict, 0)  # Output: 45
 
 print(total)
