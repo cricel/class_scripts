@@ -15,6 +15,8 @@ int main() {
     std::cout << "Subtraction: " << subtract(num1, num2) << std::endl;
     std::cout << "Multiplication: " << multiply(num1, num2) << std::endl;
     test();
+    printname("shawn");
+    add2(1,2);
 
     return 0;
 }
