@@ -17,7 +17,8 @@ void sum_region(int _two_d_arr[3][3], int _row, int& _total){
 
     // cout << _total <<endl;
 }
-
+// create a function, to ask user input for each value in the 2d array
+// and display the new 2d array value
 int main() {
     int two_d_arr[3][3]= {
         {1, 2, 3},
