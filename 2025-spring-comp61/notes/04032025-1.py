@@ -63,3 +63,20 @@ grid_dict.update({'2': {'0': 7, '1': 8, '2': 9}})
 modify_dict(grid_dict)
 
 # print(total)
+
+class FancyDict:
+    def __init__(self):
+        self.grid_dict = {}
+    
+    def getUserInput():
+        # after geting user input, it should looks like this
+        # grid_dict.update({'0': {'0': 1, '1': 2, '2': 3}})
+        # grid_dict.update({'1': {'0': 4, '1': 5, '2': 6}})
+        # grid_dict.update({'2': {'0': 7, '1': 8, '2': 9}}
+    
+    def display_sum():
+        
+
+fanyDict = FancyDict()
+fanyDict.getUserInput()
+fanyDict.display_sum()
