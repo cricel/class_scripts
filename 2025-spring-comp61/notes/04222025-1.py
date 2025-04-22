@@ -40,7 +40,10 @@ c = test5(1, 3)
 
 
 class TestClass:
-    def __init__(self, _a = 4, _b = 2):
+    def __init__(self, _a = 4, _b = 2): 
+        # need to be two _ 
+        # => _init_ is wrong
+        # => __init__ correct
         self.a = _a
         self.b = _b
         self.c = 0
@@ -91,6 +94,7 @@ print(l2[1])
 print(l2[1][2])
 print(l6[1])
 print(l6[1][2])
+print("=========")
 
 l4 = [4, 5, 6] # key for list is index
 # key for dict is whatever the key you defined
@@ -99,9 +103,82 @@ print(d["0"])
 d = {"first": 4, "second": 5, "third": 6}
 print(d["first"])
 
+a = 1
+if(a < 3):
+    print("hello")
+elif(a < 5):
+    print("hey")
+elif(a < 2):
+    print("hey")
+else:
+    print("bye")
+if(a > 0):
+    print("haha")
+if(a >= 1):
+    print("heyhey")
+
+a = 1 
+b = a < 3 # => True
+if(b):
+    print("haha")
+if(False):
+    print("heyhey")
+if(True):
+    print("hihi")
+
+a = 4
+while(a > 0):
+    a = a - 1
+    print(a)
+
+a = 4
+while(True):
+    a = a - 1
+    print(a)
+    if(a < 0):
+        break
+while(False):
+    a = a - 1
+    print(a)
+
+print("----")
+for i in range(3):
+    print(i)
+
+l = [1, 2, 3]
+for i in l:
+    print(i)
+
+index = 0
+for i in range(len(l)):
+    index = index + 1
+    print(i, index)
+
+l2 = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+]
+l2[1][2]
+for i in range(len(l2)):
+    print(l2[i])
+    for j in range(len(l2[i])):
+        print(l2[i][j])
+
+d = {"first": 4, "second": 5, "third": 6}
+for i in d:
+    print(i)
+
+for key, value in d.items():
+    print(key, value)
+for key in d.keys():
+    print(key)
+for value in d.values():
+    print(value)
+
 # create a class call "student" with attribute "name", "age"
 # define a function call "drinking", which gonna check if student is under 21 or not
-# init 3 student in a list
+# create 3 student in a list
 # and ask user input to the name and age for each student
 # and run through the list and check how many student can drink beer 
 #---
