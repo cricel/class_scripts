@@ -102,4 +102,7 @@ print(d["first"])
 # create a class call "student" with attribute "name", "age"
 # define a function call "drinking", which gonna check if student is under 21 or not
 # init 3 student in a list
+# and ask user input to the name and age for each student
 # and run through the list and check how many student can drink beer 
+#---
+# do a dict version
