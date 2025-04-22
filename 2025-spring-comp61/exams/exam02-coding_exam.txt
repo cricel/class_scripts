@@ -1,0 +1,104 @@
+# ================= #
+# 0. Hint
+# ================= #
+# 1. Please copy paste this entire content into the following platform 
+#   - https://www.onlinegdb.com/online_python_compiler
+# 2. As you go through the code, you can comment and uncomment different parts to focus on one function at a time, which helps make the overall logic easier to understand.
+# 3. If you notice strange behavior in your code, you can insert "cout" statements in various places to print values and help debug by showing what’s happening during execution.
+
+# ================= #
+# 1. Overview
+# ================= #
+# You are building a simple Library Management System using Python. The system should allow users to input book information (title, author, and page count), store that information, calculate the total number of pages across all books using recursion, and display a 2D shelf layout of book titles (a list of lists with 2 books per row).
+
+# ================= #
+# 2. Breakdown
+# ================= #
+# Your task is to implement the following:
+# - A Book class to hold individual book data (title, author, pages)
+# - A Library class with:
+#   - A catalog dictionary (title ➝ Book object)
+#   - A method add_book(book) to add a book to the catalog
+#   - A recursive method count_total_pages() that sums up total pages
+# - A method shelf_layout() that returns a 2D list layout of book titles (2 per row)
+# - A while loop to accept user input (title, author, pages), and break when user types "done"
+# - Print total pages and the 2D layout after input ends
+
+# ================= #
+# 3. Stater Code
+# ================= #
+# Define a class to store book information
+class Book:
+    # TODO: init Book class with title, author and pages variable
+    pass
+
+# Define the Library class to manage a collection of books
+class Library:
+    def __init__(self):
+        # Use a dictionary to store Book objects with title as the key
+        self.catalog = {}
+
+    def add_book(self, book):
+        # TODO: Add the book to the catalog dictionary
+        pass
+
+    def count_total_pages(self):
+        # TODO: Doing some preprocessing on data if needed
+        # TODO: Call the recursive helper function to calculate total pages
+        pass
+
+    def _recursive_page_sum(self, xxxx, xxxx): # Define the argument base on how you want to write the recursive function
+        # TODO: Write a recursive function that returns the sum of pages
+        pass
+
+    def shelf_layout(self, books_per_row=2):
+        layout = []
+        # TODO: Create a 2D list (list of lists), 2 titles per row
+        # for example, if there has 5 book (1,2,3,4,5), it would be display as
+        # [ 
+        #   [1,2],
+        #   [3,4],
+        #   [5]
+        # ]
+        return layout
+
+# Main program
+library = Library()
+
+# Input loop to gather book info from the user
+while True:
+    title = input("Enter book title (or 'done' to finish): ").strip() 
+    # .strip() Return a copy of the string with leading and trailing whitespace removed. (it just clean up the input)
+    # .lower() Return a copy of the string converted to lowercase., for example "HeLLo" -> "hello"
+    if title.lower() == "done":
+        break
+    author = input("Enter author: ").strip()
+
+    pages = int(input("Enter pages: "))
+
+    # TODO: Create a Book object and add it to the library
+    pass
+
+# TODO: Print the total number of pages in the library
+# TODO: Print the shelf layout (2D list of titles)
+
+# ================= #
+# 4. Expected Output
+# ================= #
+'''
+Enter book title (or 'done' to finish): Dune
+Enter author: Frank Herbert
+Enter pages: 412
+Enter book title (or 'done' to finish): 1984
+Enter author: George Orwell
+Enter pages: 328
+Enter book title (or 'done' to finish): Foundation
+Enter author: Isaac Asimov
+Enter pages: 244
+Enter book title (or 'done' to finish): done
+
+Total pages in library: 984
+Shelf Layout (2D Array of Book Titles):
+['Dune', '1984']
+['Foundation']
+'''
